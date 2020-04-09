@@ -25,6 +25,9 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(str(self.student), "Wilhelm, Greg has major Java Application Developer Certificate with gpa: "
                                             "0.0")
 
+    def test_object_not_created_error_last_name(self):
+        with self.assertRaises(ValueError):
+            s = t.Student('123', 'Greg', 'Java Application Developer Certificate')
 
 if __name__ == '__main__':
     unittest.main()
