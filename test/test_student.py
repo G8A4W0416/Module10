@@ -21,6 +21,10 @@ class MyTestCase(unittest.TestCase):
         assert student.major == 'Java Application Developer Certificate'
         assert student.gpa == 4.0
 
+    def test_student_str(self):
+        self.assertEqual(str(self.student), "Wilhelm, Greg has major Java Application Developer Certificate with gpa: "
+                                            "0.0")
+
 
 if __name__ == '__main__':
     unittest.main()
