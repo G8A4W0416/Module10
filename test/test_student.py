@@ -37,6 +37,10 @@ class MyTestCase(unittest.TestCase):
         with self.assertRaises(ValueError):
             s = t.Student('Wilhelm', 'Greg', '123')
 
+    def test_object_not_created_error_gpa(self):
+        with self.assertRaises(ValueError):
+            s = t.Student('Wilhelm', 'Greg', 'Java Application Developer Certificate', '4.0')
+
 
 if __name__ == '__main__':
     unittest.main()
